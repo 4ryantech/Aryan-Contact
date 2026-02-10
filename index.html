@@ -15,120 +15,52 @@
     }(window, document, 'ttq');
     </script>
 
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1799292487399379'); 
-    fbq('track', 'PageView');
-    </script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
-        :root {
-            --accent: #facc15;
-            --bg: #030712;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.08);
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        :root { --accent: #facc15; --bg: #030712; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; color: white; padding: 20px; }
+        .container { width: 100%; max-width: 380px; }
+        .main-card { background: rgba(255, 255, 255, 0.03); padding: 40px 24px; border-radius: 40px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(20px); }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .slogan { color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px; }
         
-        body { 
-            background-color: var(--bg);
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(250, 204, 21, 0.05) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
-            display: flex; justify-content: center; align-items: center; 
-            min-height: 100vh; color: #f8fafc; padding: 20px;
-        }
-
-        .container { width: 100%; max-width: 380px; animation: fadeIn 0.8s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        .main-card { 
-            background: var(--card-bg); 
-            padding: 40px 24px; border-radius: 40px; text-align: center; 
-            border: 1px solid var(--border); backdrop-filter: blur(20px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .top-badge { 
-            background: rgba(250, 204, 21, 0.1);
-            color: var(--accent); 
-            font-size: 0.85rem; font-weight: 700; 
-            padding: 6px 16px; margin-bottom: 20px; 
-            border-radius: 100px; border: 1px solid rgba(250, 204, 21, 0.2);
-            display: inline-block;
-        }
-
-        h1 { font-size: 2.4rem; font-weight: 800; color: #fff; margin-bottom: 8px; letter-spacing: -0.5px; }
-        
-        .slogan { color: #94a3b8; font-size: 0.88rem; line-height: 1.6; margin-bottom: 30px; }
-
-        .cta-text { font-size: 0.95rem; font-weight: 600; margin-bottom: 20px; color: #e2e8f0; }
-
-        .links-grid { display: flex; flex-direction: column; gap: 12px; }
-
+        /* گرنگ بۆ ئیڤێنت بیلدر */
         .btn { 
-            display: flex; align-items: center; padding: 16px 20px; 
-            border-radius: 20px; text-decoration: none; color: white; font-weight: 600; 
-            font-size: 1.05rem; transition: 0.2s all ease; 
-            background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border);
+            display: block; width: 100%; padding: 16px; margin: 12px 0; 
+            border-radius: 20px; text-decoration: none; color: white; 
+            font-weight: 600; background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
         }
-
-        .btn:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.2); transform: scale(1.02); }
-        .btn:active { transform: scale(0.98); }
         
-        .btn i { font-size: 1.5rem; margin-left: 14px; width: 28px; text-align: center; }
-        .btn span { flex-grow: 1; text-align: right; }
-        
-        .whatsapp { color: #22c55e; } .viber { color: #8b5cf6; } .snapchat { color: #fbbf24; } .instagram { color: #f43f5e; } .call { color: #f8fafc; }
-        
-        .footer { margin-top: 35px; border-top: 1px solid var(--border); padding-top: 25px; }
-        .footer b { color: var(--accent); font-size: 1.15rem; display: block; margin-bottom: 4px; }
-        .footer p { font-size: 0.85rem; color: #64748b; font-weight: 500; }
+        .whatsapp { color: #22c55e; } .viber { color: #8b5cf6; } .instagram { color: #f43f5e; }
+        .footer { margin-top: 35px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 25px; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <div class="main-card">
-            <div class="top-badge">قازانجی ئێوە قازانجی ئێمەیە</div>
-            
             <h1>ARYAN TECH</h1>
-            <p class="slogan">دوودڵ مەبە لە هەڵبژاردنی ئاریان تێک، ئێمە لێرەین بۆ قازانجی ئێوە و گەشەپێدانی کارەکانتان.</p>
+            <p class="slogan">دوودڵ مەبە لە هەڵبژاردنی ئێمە، بۆ گەشەپێدانی کارەکانتان لێرەین.</p>
 
-            <div class="cta-text">ڕێگایەکی پەیوەندی کردن هەڵبژێرە</div>
+            <a href="https://wa.me/9647729585559" id="whatsapp_btn" class="btn" onclick="ttq.track('Purchase');">
+                <i class="fab fa-whatsapp whatsapp"></i> واتسئەپ
+            </a>
 
-            <div class="links-grid">
-                <a href="https://wa.me/9647729585559" class="btn" onclick="ttq.track('Purchase'); fbq('track', 'Purchase');">
-                    <i class="fab fa-whatsapp whatsapp"></i> <span>واتسئەپ</span>
-                </a>
+            <a href="viber://contact?number=9647729585559" id="viber_btn" class="btn" onclick="ttq.track('Purchase');">
+                <i class="fab fa-viber viber"></i> ڤایبەر
+            </a>
 
-                <a href="viber://contact?number=9647729585559" class="btn" onclick="ttq.track('Purchase'); fbq('track', 'Purchase');">
-                    <i class="fab fa-viber viber"></i> <span>ڤایبەر</span>
-                </a>
+            <a href="https://instagram.com/aryann.tech" id="insta_btn" class="btn" onclick="ttq.track('Purchase');">
+                <i class="fab fa-instagram instagram"></i> ئینستاگرام
+            </a>
 
-                <a href="https://snapchat.com/t/WtUJ1FhJ" class="btn" onclick="ttq.track('Purchase'); fbq('track', 'Purchase');">
-                    <i class="fab fa-snapchat snapchat"></i> <span>سناپچات</span>
-                </a>
-
-                <a href="https://instagram.com/aryann.tech" class="btn" onclick="ttq.track('Purchase'); fbq('track', 'Purchase');">
-                    <i class="fab fa-instagram instagram"></i> <span>ئینستاگرام</span>
-                </a>
-
-                <a href="tel:+9647729585559" class="btn" onclick="ttq.track('Purchase'); fbq('track', 'Purchase');">
-                    <i class="fas fa-phone call"></i> <span>پەیوەندی تەلەفۆنی</span>
-                </a>
-            </div>
+            <a href="tel:+9647729585559" id="call_btn" class="btn" onclick="ttq.track('Purchase');">
+                <i class="fas fa-phone"></i> پەیوەندی تەلەفۆنی
+            </a>
 
             <div class="footer">
                 <b>Aryan Tech</b>
